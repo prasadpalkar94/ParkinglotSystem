@@ -1,0 +1,3 @@
+public enum ParkType {
+    PHYSICALLY_FIT,PHYSICALLY_DISABLED;
+}
