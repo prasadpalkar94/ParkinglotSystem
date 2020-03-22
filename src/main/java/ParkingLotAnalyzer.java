@@ -39,4 +39,11 @@ public class ParkingLotAnalyzer {
         }
             return false;
     }
+
+    public boolean checkEmptyLot() {
+        if (lot_List.size() < capacity){
+            return true;
+        }
+        throw new ParkingLotException("ENOUGH SPACE AVAILABLE",ParkingLotException.ExceptionType.ENOUGH_SPACE_AVAILABLE);
+    }
 }

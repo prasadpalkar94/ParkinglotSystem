@@ -43,4 +43,10 @@ public class ParkingLotTest {
           e.printStackTrace();
         }
     }
+
+    @Test
+    public void givenCondition_When_Parking_Lot_HasEnoughSpace_ShouldTakeOutSign() {
+        boolean emptyLot = parkingLotAnalyzer.checkEmptyLot();
+        Assert.assertTrue(emptyLot);
+    }
 }
