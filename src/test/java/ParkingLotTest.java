@@ -23,4 +23,16 @@ public class ParkingLotTest {
         boolean unPark = parkingLotAnalyzer.unParkVehicle();
         Assert.assertTrue(unPark);
     }
+
+    @Test
+    public void givenCondition_When_Parking_Lot_ISFULL_ShouldPutSign() {
+        try {
+            boolean checkFull = parkingLotAnalyzer.isFull();
+            Assert.assertTrue(checkFull);
+        } catch (ParkingLotException e){
+
+        }
+
+
+    }
 }
