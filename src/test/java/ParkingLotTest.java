@@ -13,8 +13,14 @@ public class ParkingLotTest {
 
 
     @Test
-    public void givenCondition_When_There_Is_Space_For_Park_shouldReturnTrue() {
+    public void givenCondition_When_Park_The_Car_shouldReturnTrue() {
         boolean park = parkingLotAnalyzer.parkVehicle();
         Assert.assertTrue(park);
+    }
+
+    @Test
+    public void givenCondition_When_UnPark_The_Car_shouldReturnTrue() {
+        boolean unPark = parkingLotAnalyzer.unParkVehicle();
+        Assert.assertTrue(unPark);
     }
 }
