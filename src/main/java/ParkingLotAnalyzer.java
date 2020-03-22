@@ -32,4 +32,11 @@ public class ParkingLotAnalyzer {
         throw new ParkingLotException("NOT ENOUGH SPACE",ParkingLotException.ExceptionType.SPACE_OCCUPIED);
     }
 
+    public boolean check_Security_Informed() {
+        isFull();
+        if(this.check == 1){
+            return true;
+        }
+            return false;
+    }
 }

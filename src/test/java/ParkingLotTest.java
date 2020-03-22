@@ -25,14 +25,22 @@ public class ParkingLotTest {
     }
 
     @Test
+    public void givenCondition_WhenParkingLot_ISFULL_InformedAirportSecurity_ShouldReturnTrue() {
+      try {
+          boolean checkForSecurity = parkingLotAnalyzer.check_Security_Informed();
+          Assert.assertTrue(checkForSecurity);
+      } catch (ParkingLotException e){
+          Assert.assertEquals(ParkingLotException.ExceptionType.SPACE_OCCUPIED, e.type);
+      }
+    }
+
+    @Test
     public void givenCondition_When_Parking_Lot_ISFULL_ShouldPutSign() {
         try {
             boolean checkFull = parkingLotAnalyzer.isFull();
             Assert.assertTrue(checkFull);
         } catch (ParkingLotException e){
-
+          e.printStackTrace();
         }
-
-
     }
 }
